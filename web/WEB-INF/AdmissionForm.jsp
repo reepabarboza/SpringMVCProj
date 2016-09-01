@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	
+
 	<h1> ${headerMessage}</h1>
 	
 	<form:errors path = "student1.*"/>
