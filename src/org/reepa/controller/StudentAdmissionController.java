@@ -34,8 +34,6 @@ public class StudentAdmissionController {
 	
 	@RequestMapping(value = "admissionForm.html", method = RequestMethod.GET)
 	protected ModelAndView getAdmissionForm() {
-		
-		
 		/*String test = null;
 		if(test == null) {
 			throw new NullPointerException();
@@ -74,12 +72,12 @@ public class StudentAdmissionController {
 	
 	@RequestMapping(value = "submitAdmissionForm.html", method = RequestMethod.POST)
 	protected ModelAndView submitAdmissionForm(/*@Valid*/ @ModelAttribute("student1") Student student, BindingResult result) {
-		
+		System.out.println("result >> " + result.hasErrors());
 		if(result.hasErrors()){
 			ModelAndView model = new ModelAndView("AdmissionForm");
 			return model;
 		}
-		
+		System.out.println("return");
 		ModelAndView model = new ModelAndView("AdmissionSuccess");
 		
 		//model.addObject("headerMessage", "Admission successful");

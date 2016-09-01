@@ -10,22 +10,16 @@
 </head>
 <body>
 
-	<%-- <link rel = "stylesheet" href="<spring:theme code='styleSheet'/>" type = "text/css"/> --%>
-	<p><a href = "/SpringMVC/admissionForm.html?siteTheme=green">Green</a> | 
-	<a href = "/SpringMVC/admissionForm.html?siteTheme=red">Red</a>
-	</p>
-
-	<a href = "/SpringMVC/admissionForm.html?siteLanguage=en">English</a> | 
-	<a href = "/SpringMVC/admissionForm.html?siteLanguage=fr">French</a>
+	
 	<h1> ${headerMessage}</h1>
 	
 	<form:errors path = "student1.*"/>
 	
-	<form action = "/SpringMVC/submitAdmissionForm.html" method = "post">
-		<p> <input type = "text" name = "studentName">
+	<form action = "/submitAdmissionForm.html" method = "post">
+		<p> Student's name : <input type = "text" name = "studentName">
 		</p>
 		
-		<p>  <input type = "text" name = "studentHobby">
+		<p> Student's Hobby : <input type = "text" name = "studentHobby">
 		</p>
 		
 		<p> Student's mobile : <input type = "text" name = "studentMobile"> 
